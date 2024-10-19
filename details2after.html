@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Store - Your Best Marketplace</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="images/logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="indexafterlogin.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categoriesafter.html">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="artikelafterlogin.html">Artikel</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content page-details">
+      <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="indexafterlogin.html">Beranda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Detail Produk</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store-gallery" id="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8" data-aos="zoom-in">
+              <transition name="slide-fade" mode="out-in">
+                <img :key="photos[activePhoto].id" :src="photos[activePhoto].url" class="w-100 main-image" alt="" />
+              </transition>
+            </div>
+            <div class="col-lg-2">
+              <div class="row">
+                <div
+                  class="col-3 col-lg-12 mt-2 mt-lg-0"
+                  v-for="(photo, index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="#" @click="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      class="w-100 thumbnail-image"
+                      :class="{ active: index == activePhoto }"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="store-details-container" data-aos="fade-up">
+        <section class="store-heading">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <h1>Dobujack Tshirt Lost Fahov Black Tees</h1>
+                <div class="owner">Dobujack Indonesia</div>
+                <div class="price">Rp88.000</div>
+              </div>
+              <div class="col-lg-2" data-aos="zoom-in">
+                <a
+                  class="btn btn-success nav-link px-4 text-white btn-block mb-3"
+                  id="addToCart"
+                  href="#"
+                  data-id="1"
+                  data-name="Dobujack Tshirt Lost Fahov Black Tees"
+                  data-price="88000"
+                  data-image="https://down-id.img.susercontent.com/file/id-11134207-7r98w-luptrkrdddx8bd"
+                  >Masukkan Keranjang</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="store-description">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <p>Product Summary:</p>
+              <ul>
+                <li>Cotton Combed 30s 160 Grm Material</li>
+                <li>Plastisol Printing Ink</li>
+                <li>Do not iron on print</li>
+                <li>Regular cutting</li>
+              </ul>
+              <p>SIZE CHART</p>
+              <ul>
+                <li>SMALL: HEIGHT 70cm | WIDTH 50cm | SHOULDER 14cm | ARM 20cm</li>
+                <li>MEDIUM: HEIGHT 72cm | WIDTH 52cm | SHOULDER 15cm | ARM 21cm</li>
+                <li>LARGE: HEIGHT 74cm | WIDTH 54cm | SHOULDER 16cm | ARM 22cm</li>
+                <li>XLARGE: HEIGHT 76cm | WIDTH 56cm | SHOULDER 17cm | ARM 23cm</li>
+                <li>XXLARGE: HEIGHT 78cm | WIDTH 58cm | SHOULDER 18cm | ARM 24cm</li>
+              </ul>
+              <p>Berat Badan Dan Tinggi Badan Menggunakan:</p>
+              <ul>
+                <li>Size S:</li>
+                <ul>
+                  <li>Tinggi Badan: 155cm-160cm</li>
+                  <li>Berat Badan: 40kg-45kg</li>
+                </ul>
+                <li>Size M:</li>
+                <ul>
+                  <li>Tinggi Badan: 160cm-165cm</li>
+                  <li>Berat Badan: 55kg-60kg</li>
+                </ul>
+                <li>Size L:</li>
+                <ul>
+                  <li>Tinggi Badan: 170cm-175cm</li>
+                  <li>Berat Badan: 65kg-70kg</li>
+                </ul>
+                <li>Size XL:</li>
+                <ul>
+                  <li>Tinggi Badan: 175cm-180cm</li>
+                  <li>Berat Badan: 75kg-80kg</li>
+                </ul>
+                <li>Size XXL:</li>
+                <ul>
+                  <li>Tinggi Badan: 180cm-185cm</li>
+                  <li>Berat Badan: 85kg-90kg</li>
+                </ul>
+              </ul>
+              <p>Selisih 1-2 Cm pada produk mungkin terjadi dikarenakan proses pengembangan dan produksi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store-review">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8 mt-3 mb-3">
+              <h5>Penilaian Produk (3)</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <ul class="list-unstyled">
+                <li class="media">
+                  <img
+                    src="https://down-id.img.susercontent.com/file/5363a6154063929e2be69945638d27e0_tn"
+                    class="mr-3 rounded-circle"
+                    alt=""
+                  />
+                  <div class="media-body">
+                    <h5 class="mt-2 mb-1">tintadesaid</h5>
+                    gak kalah bagus sama yang sebelah wkwkwk
+                  </div>
+                </li>
+                <li class="media my-4">
+                  <img
+                    src="https://down-id.img.susercontent.com/file/aceebb025c056a9087fe147afac3ae4a_tn"
+                    class="mr-3 rounded-circle"
+                    alt=""
+                  />
+                  <div class="media-body">
+                    <h5 class="mt-2 mb-1">sinta1996</h5>
+                    Suami saya suka. Makasih seller semoga selalu amanah yaaa.
+                    Kurir nyaaa udah kenal sama aku jadi langsung diantar
+                    kerumah. Makasih sekali lagii..
+                  </div>
+                </li>
+                <li class="media">
+                  <img
+                    src="https://down-id.img.susercontent.com/file/9cb56c1194f19111285f2e1d98356ad1_tn"
+                    class="mr-3 rounded-circle"
+                    alt=""
+                  />
+                  <div class="media-body">
+                    <h5 class="mt-2 mb-1">astridlisa06</h5>
+                    Paket mendarat dengan selamat, tapi mendaratnya dirumah
+                    orang, bagus banget, empuk banget dipakai nyaman banget, pas
+                    dipakai adek saya , sempet bngung tdi pketnya udh dtng tpi
+                    kok orang rumah blom nerima. Jadi nanya sama adminya, ramah
+                    bangett, makasih banget kak udah bantuin
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pt-4 pb-2">2024 | Inas | 434221029</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#gallery",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          activePhoto: 1,
+          photos: [
+            {
+              id: 1,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r98w-luptrkrdddx8bd",
+            },
+            {
+              id: 2,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r991-luu3zpvl9bg478",
+            },
+            {
+              id: 3,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r990-luu3zpw573qp07",
+            },
+            {
+              id: 4,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r98v-luu3zpvldj0q13",
+            },
+          ],
+        },
+        methods: {
+          changeActive(id) {
+            this.activePhoto = id;
+          },
+        },
+      });
+    </script>
+      <script>
+        document.getElementById('addToCart').addEventListener('click', function (event) {
+          event.preventDefault();
+          const product = {
+            id: this.dataset.id,
+            name: this.dataset.name,
+            price: this.dataset.price,
+            image: this.dataset.image,
+          };
+
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.push(product);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert('Product added to cart');
+          window.location.href = 'cart.html';
+        });
+      </script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

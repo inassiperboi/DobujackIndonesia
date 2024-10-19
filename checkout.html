@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Your Best Marketplace - Checkout" />
+  <meta name="author" content="Inas" />
+
+  <title>Checkout - Your Best Marketplace</title>
+
+  <!-- CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="style/main.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artikelafterlogin.html">Artikel</a>
+          </li>
+        </ul>
+        <!-- User Menu -->
+        <ul class="navbar-nav d-none d-lg-flex ml-2">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="images/icon-user.png" alt="User Icon" class="rounded-circle mr-2 profile-picture" />
+              Hi, Inas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="dashboard.html">Dashboard</a>
+              <a class="dropdown-item" href="profil.html">Profil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-inline-block mt-2" href="#">
+              <img src="images/icon-cart-empty.svg" alt="Cart Icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content page-checkout">
+    <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="indexafterlogin.html">Beranda</a></li>
+                <li class="breadcrumb-item active">Checkout</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-checkout">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>Your Cart</h2>
+            <div class="table-responsive">
+              <table class="table table-borderless table-cart">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Name &amp; Seller</th>
+                    <th>Price</th>
+                    <th>Menu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="width: 20%;">
+                      <img src="images/newitem1.png" alt="Product Image" class="cart-image" />
+                    </td>
+                    <td style="width: 35%;">
+                      <div class="product-title">Dobujack Shirt</div>
+                      <div class="product-subtitle">by Dobujack</div>
+                    </td>
+                    <td style="width: 20%;">
+                      <div class="product-title">Rp88.000</div>
+                    </td>
+                    <td style="width: 15%;">
+                      <a href="#" class="btn btn-remove-cart" onclick="removeItem(this)">Remove</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <a href="indexafterlogin.html" class="btn btn-secondary btn-block">Continue Shopping</a>
+              </div>
+              <div class="col-lg-6">
+                <a href="prosescheckout.html" class="btn btn-success btn-block">Proceed to Checkout</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Order Summary</h5>
+                <p class="card-text">Subtotal: Rp88.000</p>
+                <p class="card-text">Shipping: Rp20.000</p>
+                <h5>Total: Rp108.000</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="pt-4 pb-2">2024 | Inas | 434221029</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Custom scripts -->
+  <script src="script/navbar-scroll.js"></script>
+  <script>
+    function removeItem(element) {
+      var row = element.closest('tr');
+      row.parentNode.removeChild(row);
+    }
+  </script>
+</body>
+</html>

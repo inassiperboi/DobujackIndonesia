@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Process Checkout - Your Best Marketplace" />
+  <meta name="author" content="Inas" />
+
+  <title>Process Checkout - Your Best Marketplace</title>
+
+  <!-- CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="style/main.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top">
+    <div class="container">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="indexafterlogin.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categoriesafter.html">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artikelafterlogin.html">Artikel</a>
+          </li>
+        </ul>
+        <!-- User Menu -->
+        <ul class="navbar-nav d-none d-lg-flex ml-2">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="images/icon-user.png"
+                alt="User Icon"
+                class="rounded-circle mr-2 profile-picture"
+              />
+              Hi, Inas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="profil.html">Profil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-inline-block mt-2" href="#">
+              <img src="images/icon-cart-empty.svg" alt="Cart Icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content page-checkout">
+    <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="indexafterlogin.html">Beranda</a></li>
+                <li class="breadcrumb-item active">Process Checkout</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-checkout">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>Detail Belanja</h2>
+            <form>
+              <div class="form-group">
+                <label for="addressOne">Alamat pengiriman</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addressOne"
+                  name="addressOne"
+                  placeholder="Alamat"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="province">Provinsi</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="province"
+                  name="province"
+                  placeholder="Provinsi"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="city">Kota</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  name="city"
+                  placeholder="Kota"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="postalCode">Kode Pos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postalCode"
+                  name="postalCode"
+                  placeholder="Kode Pos"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="country">Negara</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="country"
+                  name="country"
+                  placeholder="Negara"
+                  required
+                />
+              </div>
+            </form>
+
+            <h2>Informasi Pembayaran</h2>
+            <form>
+              <div class="form-group">
+                <label for="payment">Metode Pembayaran</label>
+                <select class="form-control" id="payment" name="payment" required>
+                  <option value="bca">BCA</option>
+                  <option value="bni">BNI</option>
+                  <option value="mandiri">MANDIRI</option>
+                  <option value="seabank">Seabank</option>
+                  <option value="dana">DANA</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total</h5>
+                <p class="card-text">Subtotal: Rp88.000</p>
+                <p class="card-text">Shipping: Rp20.000</p>
+                <h5>Total: Rp108.000</h5>
+              </div>
+            </div>
+            <button id="verify-payment" class="btn btn-success btn-block mt-3">Verifikasi Pembayaran</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Order in Process Section -->
+  <div class="page-content page-order-in-process" style="display:none;">
+    <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="indexafterlogin.html">Beranda</a></li>
+                <li class="breadcrumb-item active">Pesanan Sedang Dikemas</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-order-in-process">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <img src="images/newitem1.png" alt="Order in Process Image" class="img-fluid mb-4">
+            <h2>Pesanan Anda Sedang Dikemas</h2>
+            <p class="lead">Pesanan Anda sedang dalam proses pengemasan. Kami akan segera mengirimkan pesanan Anda. Terima kasih telah berbelanja di Marketplace kami.</p>
+            <a href="indexafterlogin.html" class="btn btn-primary mt-3">Kembali ke Beranda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="pt-4 pb-2">
+            2024 | Inas | 434221029
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Custom scripts -->
+  <script src="script/navbar-scroll.js"></script>
+  <script>
+    document.getElementById('verify-payment').addEventListener('click', function() {
+      alert('Pembayaran terkonfirmasi, pesanan akan segera diproses.');
+      document.querySelector('.page-checkout').style.display = 'none';
+      document.querySelector('.page-order-in-process').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

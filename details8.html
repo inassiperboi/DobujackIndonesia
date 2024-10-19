@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Store - Your Best Marketplace</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav
+    class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
+    data-aos="fade-down"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="images/logo.svg" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artikel.html">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Daftar</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-success nav-link px-4 text-white"
+              href="login.html"
+              >Masuk</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Page Content -->
+    <div class="page-content page-details">
+      <section
+        class="store-breadcrumbs"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Detail Produk
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store-gallery" id="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8" data-aos="zoom-in">
+              <transition name="slide-fade" mode="out-in">
+                <img
+                  :key="photos[activePhoto].id"
+                  :src="photos[activePhoto].url"
+                  class="w-100 main-image"
+                  alt=""
+                />
+              </transition>
+            </div>
+            <div class="col-lg-2">
+              <div class="row">
+                <div
+                  class="col-3 col-lg-12 mt-2 mt-lg-0"
+                  v-for="(photo, index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="#" @click="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      class="w-100 thumbnail-image"
+                      :class="{ active: index == activePhoto }"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="store-details-container" data-aos="fade-up">
+        <section class="store-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1>Dobujack Longsleeve Shirt Seba Black Kerah Shanghai</h1>
+                        <div class="owner">Dobujack Indonesia</div>
+                        <div class="price">Rp149.000 - Rp154.000</div>
+                    </div>
+                    <div class="col-lg-2" data-aos="zoom-in">
+                        <a class="btn btn-success nav-link px-4 text-white btn-block mb-3" href="login.html">Masukkan Keranjang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="store-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <p>Product Summary:</p>
+                    <p>Detail Produk :</p>
+                    <ul>
+                        <li>Potongan: Regular</li>
+                        <li>Bahan: Katun Sigaret</li>
+                        <li>Tipe Kerah: Shanghai/Changi</li>
+                        <li>Perbedaan Warna produk dengan display pada settingan layar monitor anda dapat terjadi.</li>
+                    </ul>
+                    <p>SIZE CHART</p>
+                    <ul>
+                        <li>SMALL: LENGTH 67cm | WIDTH 48cm | ARM 57cm</li>
+                        <li>MEDIUM: LENGTH 69cm | WIDTH 50cm | ARM 58cm</li>
+                        <li>LARGE: LENGTH 71cm | WIDTH 52cm | ARM 59cm</li>
+                        <li>XLARGE: LENGTH 73cm | WIDTH 54cm | ARM 60cm</li>
+                        <li>X-XLARGE: LENGTH 75cm | WIDTH 56cm | ARM 61cm</li>
+                    </ul>
+                    <p>Berat Badan Dan Tinggi Badan Menggunakan:</p>
+                    <ul>
+                        <li>Size S:</li>
+                        <ul>
+                            <li>Tinggi Badan: 155cm-160cm</li>
+                            <li>Berat Badan: 40kg-45kg</li>
+                        </ul>
+                        <li>Size M:</li>
+                        <ul>
+                            <li>Tinggi Badan: 160cm-165cm</li>
+                            <li>Berat Badan: 55kg-60kg</li>
+                        </ul>
+                        <li>Size L:</li>
+                        <ul>
+                            <li>Tinggi Badan: 170cm-175cm</li>
+                            <li>Berat Badan: 65kg-70kg</li>
+                        </ul>
+                        <li>Size XL:</li>
+                        <ul>
+                            <li>Tinggi Badan: 175cm-180cm</li>
+                            <li>Berat Badan: 75kg-80kg</li>
+                        </ul>
+                        <li>Size XXL:</li>
+                        <ul>
+                            <li>Tinggi Badan: 180cm-185cm</li>
+                            <li>Berat Badan: 85kg-90kg</li>
+                        </ul>
+                    </ul>
+                    <p>SEMUA UKURAN DILAKUKAN DALAM UKURAN SENTIMETER</p>
+                    <p>SELISIH 1-2CM PADA SIZE MUNGKIN TERJADI DIKARENAKAN PROSES PENGEMBANGAN DAN PRODUKSI</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+        <section class="store-review">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8 mt-3 mb-3">
+                <h5>Penilaian Produk (0)</h5>
+              </div>
+            </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pt-4 pb-2">
+              2024 | Inas | 434221029
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      
+      AOS.init();
+    </script>
+    <script src="vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#gallery",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          activePhoto: 1,
+          photos: [
+            {
+              id: 1,
+              url: "",
+            },
+            {
+              id: 2,
+              url: "https://down-id.img.susercontent.com/file/sg-11134201-7rccc-lsi4hazavhxle8",
+            },
+            {
+              id: 3,
+              url: "https://down-id.img.susercontent.com/file/sg-11134201-7rcek-lsi4hfw1oudv40",
+            },
+            {
+              id: 4,
+              url: "https://down-id.img.susercontent.com/file/sg-11134201-7rcc9-lsi4hh3lx3zybf",
+            },
+          ],
+        },
+        methods: {
+          changeActive(id) {
+            this.activePhoto = id;
+          },
+        },
+      });
+    </script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

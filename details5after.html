@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Store - Your Best Marketplace</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav
+    class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top"
+    data-aos="fade-down"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="images/logo.svg" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="indexafterlogin.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categoriesafter.html">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="artikelafterlogin.html">Artikel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Page Content -->
+    <div class="page-content page-details">
+      <section
+        class="store-breadcrumbs"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="indexafterlogin.html">Beranda</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Detail Produk
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store-gallery" id="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8" data-aos="zoom-in">
+              <transition name="slide-fade" mode="out-in">
+                <img
+                  :key="photos[activePhoto].id"
+                  :src="photos[activePhoto].url"
+                  class="w-100 main-image"
+                  alt=""
+                />
+              </transition>
+            </div>
+            <div class="col-lg-2">
+              <div class="row">
+                <div
+                  class="col-3 col-lg-12 mt-2 mt-lg-0"
+                  v-for="(photo, index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="#" @click="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      class="w-100 thumbnail-image"
+                      :class="{ active: index == activePhoto }"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="store-details-container" data-aos="fade-up">
+        <section class="store-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1>Dobujack Tas Equal Black Slingbag</h1>
+                        <div class="owner">Dobujack Indonesia</div>
+                        <div class="price">Rp85.000</div>
+                    </div>
+                    <div class="col-lg-2" data-aos="zoom-in">
+                        <a class="btn btn-success nav-link px-4 text-white btn-block mb-3" href="login.html">Masukkan Keranjang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="store-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <p>Product Summary:</p>
+                    <ul>
+                        <li>Type: Sling Bag</li>
+                        <li>Color: Black</li>
+                        <li>Material: Cordura Fabric</li>
+                        <li>Strap: Nylon Webbing</li>
+                        <li>Zipper: YKK & Waterproof Zipper</li>
+                        <li>Label: Woven "DOBUJACK"</li>
+                        <li>1 Pocket Inside with Zipper</li>
+                    </ul>
+                    <p>Dimension:</p>
+                    <ul>
+                        <li>Width: 22cm</li>
+                        <li>Height: 15cm</li>
+                        <li>Depth: 3cm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>    
+        <section class="store-review">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8 mt-3 mb-3">
+                <h5>Penilaian Produk (0)</h5>
+              </div>
+            </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pt-4 pb-2">
+              2024 | Inas | 434221029
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      
+      AOS.init();
+    </script>
+    <script src="vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#gallery",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          activePhoto: 1,
+          photos: [
+            {
+              id: 1,
+              url: "",
+            },
+            {
+              id: 2,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r98r-lstmz6v7gbjxf7",
+            },
+            {
+              id: 3,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lstmz6v7oqw710",
+            },
+            {
+              id: 4,
+              url: "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lstmz6v7kj6vb7",
+            },
+          ],
+        },
+        methods: {
+          changeActive(id) {
+            this.activePhoto = id;
+          },
+        },
+      });
+    </script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
